@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Club Defensores del Azul</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:#123;
+  background:#f4fbfa;
+  line-height:1.6;
+}
+
+header{
+  background:linear-gradient(135deg,#006d77,#0096a6,#00b4a8);
+  color:white;
+  padding:55px 20px;
+  text-align:center;
+}
+
+header h1{
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+header p{
+  font-size:18px;
+  max-width:750px;
+  margin:auto;
+}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:#004f59;
+  text-align:center;
+  padding:12px 5px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 8px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:55px 20px;
+}
+
+h2{
+  color:#006d77;
+  font-size:28px;
+  margin-bottom:18px;
+}
+
+.hero{
+  background:white;
+  text-align:center;
+}
+
+.frase{
+  font-size:22px;
+  color:#008c95;
+  font-weight:bold;
+  margin:20px 0;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  margin-top:25px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 4px 15px #0001;
+}
+
+.card h3{
+  color:#007c83;
+  margin-bottom:10px;
+}
+
+.icono{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.destacado{
+  background:#d9f3f0;
+  border-left:6px solid #008c95;
+  padding:25px;
+  border-radius:10px;
+  margin-top:20px;
+}
+
+.boton{
+  display:inline-block;
+  background:#008c95;
+  color:white;
+  padding:12px 22px;
+  border-radius:25px;
+  text-decoration:none;
+  margin-top:15px;
+  font-weight:bold;
+}
+
+footer{
+  background:#003c43;
+  color:white;
+  text-align:center;
+  padding:35px 20px;
+}
+
+footer p{
+  margin:6px;
+}
+
+@media(max-width:600px){
+  header h1{
+    font-size:29px;
+  }
+
+  header{
+    padding:45px 15px;
+  }
+
+  nav a{
+    display:inline-block;
+    margin:5px;
+  }
+
+  section{
+    padding:40px 18px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>💧 CLUB DEFENSORES DEL AZUL</h1>
+  <p>Institución Educativa Pueblo Rico · Neira, Caldas</p>
+  <p class="frase">
+    Del territorio al dato: conocemos, investigamos y protegemos el agua.
+  </p>
+</header>
+
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#proyecto">Proyecto</a>
+  <a href="#territorio">Territorio</a>
+  <a href="#investigacion">Investigación</a>
+  <a href="#blog">Blog</a>
+</nav>
+
+<section id="inicio" class="hero">
+  <h2>🌎 Somos Defensores del Azul</h2>
+  <p>
+    Somos un club ambiental de la Institución Educativa Pueblo Rico,
+    comprometido con el conocimiento, protección y conservación del agua,
+    los humedales y la biodiversidad de nuestro territorio.
+  </p>
+
+  <div class="destacado">
+    <strong>Educación + territorio + tecnología + investigación</strong>
+    <p>
+      Convertimos la observación de nuestro entorno en información que
+      nos permite comprenderlo y protegerlo.
+    </p>
+  </div>
+</section>
+
+<section id="proyecto">
+  <h2>💧 Nuestro proyecto</h2>
+
+  <p>
+    Nuestro trabajo integra a estudiantes, docentes y comunidad en procesos
+    de reconocimiento, diagnóstico e investigación ambiental.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="icono">🌿</div>
+      <h3>Conocemos</h3>
+      <p>
+        Exploramos nuestro territorio y reconocemos sus especies,
+        ecosistemas, humedales y fuentes de agua.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icono">📍</div>
+      <h3>Registramos</h3>
+      <p>
+        Utilizamos herramientas tecnológicas para registrar información
+        directamente en campo.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icono">🔬</div>
+      <h3>Investigamos</h3>
+      <p>
+        Transformamos los datos obtenidos en conocimiento para comprender
+        nuestro territorio.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icono">💙</div>
+      <h3>Protegemos</h3>
+      <p>
+        Promovemos acciones para conservar el agua y la biodiversidad.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="territorio">
+  <h2>🌿 Nuestro territorio</h2>
+
+  <p>
+    Nuestro proceso de investigación se desarrolla en diferentes espacios
+    naturales de la zona de influencia de la Institución Educativa Pueblo Rico.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>💦 Humedales</h3>
+      <p>
+        Reconocimiento y diagnóstico de humedales como ecosistemas
+        fundamentales para la vida.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🌱 Biodiversidad</h3>
+      <p>
+        Inventario y reconocimiento de especies vegetales presentes
+        en nuestro territorio.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🏞️ Microcuencas</h3>
+      <p>
+        Observación y seguimiento de las condiciones ambientales
+        relacionadas con nuestras fuentes de agua.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="investigacion">
+  <h2>📊 Del territorio al dato</h2>
+
+  <p>
+    La tecnología se convierte en una herramienta para investigar nuestro
+    territorio.
+  </p>
+
+  <div class="destacado">
+    <h3>📱 CyberTracker</h3>
+    <p>
+      Utilizamos herramientas de captura de datos en campo para registrar
+      ubicación, fotografías, especies vegetales y diferentes variables
+      ambientales.
+    </p>
+  </div>
+
+  <div class="destacado">
+    <h3>🗺️ Cartografía ambiental</h3>
+    <p>
+      Los datos recopilados pueden convertirse en mapas digitales para
+      visualizar nuestros sitios de investigación y comprender mejor
+      el territorio.
+    </p>
+  </div>
+</section>
+
+<section id="blog">
+  <h2>📰 Nuestro blog</h2>
+
+  <p>
+    En este espacio compartiremos las actividades, salidas de campo,
+    investigaciones, descubrimientos y experiencias de nuestros
+    Defensores del Azul.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>🔎 Exploraciones</h3>
+      <p>Historias y resultados de nuestras salidas de campo.</p>
+    </div>
+
+    <div class="card">
+      <h3>📸 Galería</h3>
+      <p>Fotografías de nuestros ecosistemas y actividades.</p>
+    </div>
+
+    <div class="card">
+      <h3>🌎 Noticias</h3>
+      <p>Información sobre nuestras actividades ambientales.</p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>🤝 Únete a la defensa del agua</h2>
+
+  <p>
+    Cada observación, cada dato y cada acción cuenta.
+    Conocer nuestro territorio es el primer paso para protegerlo.
+  </p>
+
+  <a class="boton" href="#inicio">Volver al inicio ↑</a>
+</section>
+
+<footer>
+  <p><strong>💧 CLUB DEFENSORES DEL AZUL</strong></p>
+  <p>Institución Educativa Pueblo Rico</p>
+  <p>Neira · Caldas · Colombia</p>
+  <p>🌿 Conocer · Investigar · Proteger 🌿</p>
+</footer>
+
+</body>
+</html>
