@@ -3,10 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Club Defensores del Azul</title>
-
 <meta name="description" content="Club Defensores del Azul - Institución Educativa Pueblo Rico, Neira, Caldas. Conocemos, investigamos y protegemos el agua.">
+<title>Club Defensores del Azul</title>
 
 <style>
 *{
@@ -20,166 +18,236 @@ html{
 }
 
 body{
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
   line-height:1.6;
   color:#17324d;
-  background:#f4f9fb;
+  background:#f4fbfd;
 }
 
 header{
-  background:linear-gradient(135deg,#006994,#00a6a6);
+  background:linear-gradient(135deg,#006994,#00a8cc,#38b48b);
   color:white;
-  text-align:center;
   padding:55px 20px;
-}
-
-header h1{
-  font-size:42px;
-  margin-bottom:12px;
-}
-
-header p{
-  font-size:20px;
-  max-width:800px;
-  margin:auto;
-}
-
-nav{
-  background:#ffffff;
-  padding:15px;
   text-align:center;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 2px 8px rgba(0,0,0,.12);
 }
 
-nav a{
-  color:#006994;
-  text-decoration:none;
-  font-weight:bold;
-  margin:0 10px;
-  display:inline-block;
-  padding:6px;
-}
-
-nav a:hover{
-  color:#00a6a6;
-}
-
-section{
-  max-width:1100px;
-  margin:auto;
-  padding:55px 20px;
-}
-
-h2{
-  text-align:center;
-  color:#006994;
-  font-size:32px;
-  margin-bottom:25px;
-}
-
-h3{
-  color:#007f86;
+header .logo{
+  font-size:4rem;
   margin-bottom:10px;
 }
 
-.intro{
-  text-align:center;
-  font-size:19px;
+header h1{
+  font-size:clamp(2rem,6vw,4rem);
+  margin-bottom:10px;
+}
+
+header p{
   max-width:850px;
   margin:auto;
+  font-size:1.15rem;
+}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#063b57;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  box-shadow:0 3px 10px #0003;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  padding:14px 18px;
+  font-weight:bold;
+}
+
+nav a:hover{
+  background:#087fa5;
+}
+
+.container{
+  width:min(1100px,92%);
+  margin:auto;
+}
+
+section{
+  padding:60px 0;
+}
+
+section h2{
+  text-align:center;
+  color:#006994;
+  font-size:2rem;
+  margin-bottom:35px;
+}
+
+.hero{
+  background:white;
+  text-align:center;
+  padding:65px 20px;
+}
+
+.hero h2{
+  font-size:2.3rem;
+  margin-bottom:20px;
+}
+
+.hero p{
+  max-width:850px;
+  margin:auto;
+  font-size:1.15rem;
 }
 
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
   gap:22px;
-  margin-top:30px;
 }
 
 .card{
   background:white;
-  padding:25px;
-  border-radius:15px;
-  box-shadow:0 4px 14px rgba(0,0,0,.10);
-  border-top:5px solid #00a6a6;
-}
-
-.card p{
-  margin-top:8px;
-}
-
-.hero-box{
-  background:white;
-  max-width:900px;
-  margin:30px auto 0;
-  padding:30px;
   border-radius:18px;
-  box-shadow:0 5px 18px rgba(0,0,0,.12);
-  text-align:center;
+  padding:28px;
+  box-shadow:0 5px 18px #063b5718;
+  border-top:5px solid #00a8cc;
+  transition:.25s;
 }
 
-.hero-box strong{
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card .icon{
+  font-size:2.5rem;
+  margin-bottom:12px;
+}
+
+.card h3{
   color:#006994;
-}
-
-.data{
-  background:#e5f5f7;
+  margin-bottom:10px;
 }
 
 .highlight{
-  background:linear-gradient(135deg,#006994,#00a6a6);
+  background:#e2f7f5;
+}
+
+.data-box{
+  background:#063b57;
   color:white;
-  text-align:center;
   border-radius:20px;
-  padding:40px 25px;
+  padding:35px;
   margin-top:25px;
 }
 
-.highlight h2{
+.data-box h3{
+  color:#8ce6d0;
+  margin-bottom:15px;
+}
+
+.steps{
+  counter-reset:paso;
+}
+
+.step{
+  background:white;
+  padding:25px;
+  margin-bottom:18px;
+  border-radius:15px;
+  position:relative;
+  padding-left:75px;
+  box-shadow:0 4px 15px #00000012;
+}
+
+.step:before{
+  counter-increment:paso;
+  content:counter(paso);
+  position:absolute;
+  left:20px;
+  top:20px;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#00a8cc;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:18px;
+}
+
+.photo{
+  min-height:180px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#b9e8ef,#7bd1c2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  color:#06425e;
+  font-weight:bold;
+}
+
+.cta{
+  background:linear-gradient(135deg,#006994,#063b57);
+  color:white;
+  text-align:center;
+  border-radius:25px;
+  padding:45px 25px;
+}
+
+.cta h2{
   color:white;
 }
 
+.button{
+  display:inline-block;
+  margin-top:20px;
+  padding:13px 25px;
+  background:#38b48b;
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+}
+
 footer{
-  background:#12344d;
+  background:#032638;
   color:white;
   text-align:center;
   padding:35px 20px;
 }
 
 footer p{
-  margin:6px 0;
-}
-
-.button{
-  display:inline-block;
-  margin-top:20px;
-  background:white;
-  color:#006994;
-  padding:12px 22px;
-  border-radius:25px;
-  text-decoration:none;
-  font-weight:bold;
+  margin:7px 0;
 }
 
 @media(max-width:600px){
-  header h1{
-    font-size:32px;
-  }
-
-  header p{
-    font-size:17px;
-  }
-
   nav a{
-    margin:3px 5px;
-    font-size:14px;
+    padding:10px 9px;
+    font-size:.88rem;
   }
 
-  h2{
-    font-size:27px;
+  section{
+    padding:45px 0;
+  }
+
+  header{
+    padding:40px 15px;
+  }
+
+  .step{
+    padding-left:65px;
   }
 }
 </style>
@@ -188,58 +256,23 @@ footer p{
 <body>
 
 <header id="inicio">
-  <h1>💧 Club Defensores del Azul</h1>
+  <div class="logo">💧🌿</div>
+  <h1>Club Defensores del Azul</h1>
   <p>Del territorio al dato: conocemos, investigamos y protegemos el agua.</p>
-
-  <div class="hero-box">
-    <strong>Institución Educativa Pueblo Rico</strong><br>
-    Neira, Caldas<br><br>
-    Un espacio escolar para conocer nuestro territorio, investigar sus ecosistemas y promover acciones para proteger el agua.
-  </div>
+  <p>Institución Educativa Pueblo Rico · Neira · Caldas</p>
 </header>
 
 <nav>
   <a href="#inicio">Inicio</a>
-  <a href="#nosotros">Quiénes somos</a>
+  <a href="#club">El Club</a>
   <a href="#territorio">Territorio</a>
+  <a href="#agua">Agua</a>
+  <a href="#datos">Datos</a>
   <a href="#biodiversidad">Biodiversidad</a>
-  <a href="#investigacion">Investigación</a>
-  <a href="#tecnologia">Tecnología</a>
   <a href="#galeria">Galería</a>
-  <a href="#contacto">Contacto</a>
+  <a href="#aliados">Aliados</a>
 </nav>
 
-<section id="nosotros">
-  <h2>🌎 Quiénes somos</h2>
-
-  <p class="intro">
-    El Club Defensores del Azul es una iniciativa educativa de la
-    Institución Educativa Pueblo Rico, en Neira, Caldas, orientada al
-    conocimiento, valoración y protección del agua y de los ecosistemas
-    asociados a ella.
-  </p>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>💧 Nuestra misión</h3>
-      <p>
-        Formar estudiantes capaces de observar, investigar y participar
-        activamente en la protección de las fuentes de agua y la biodiversidad
-        de nuestro territorio.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>🔎 Nuestra mirada</h3>
-      <p>
-        Pasamos de la observación del territorio a la generación de datos
-        que permitan comprender mejor nuestros ecosistemas.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>🤝 Trabajo colectivo</h3>
-      <p>
-        Estudiantes, docentes, familias e instituciones aliadas construimos
-        conocimiento y acciones para cuidar nuestro patrimonio natural.
+<section class="hero">
+  <div class="container">
+   
