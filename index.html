@@ -10,269 +10,177 @@
 
 <style>
 *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    line-height:1.6;
-    background:#f4f9fb;
-    color:#17324d;
+  font-family:Arial, Helvetica, sans-serif;
+  line-height:1.6;
+  color:#17324d;
+  background:#f4f9fb;
 }
 
 header{
-    background:linear-gradient(135deg,#006994,#00a6c7,#38b6a5);
-    color:white;
-    text-align:center;
-    padding:55px 20px;
-}
-
-.logo{
-    width:95px;
-    height:95px;
-    margin:auto;
-    border-radius:50%;
-    background:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:48px;
-    box-shadow:0 5px 18px rgba(0,0,0,.2);
+  background:linear-gradient(135deg,#006994,#00a6a6);
+  color:white;
+  text-align:center;
+  padding:55px 20px;
 }
 
 header h1{
-    margin-top:20px;
-    font-size:clamp(30px,7vw,55px);
+  font-size:42px;
+  margin-bottom:12px;
 }
 
 header p{
-    max-width:800px;
-    margin:12px auto;
-    font-size:19px;
+  font-size:20px;
+  max-width:800px;
+  margin:auto;
 }
 
 nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#073b5c;
-    box-shadow:0 2px 10px rgba(0,0,0,.2);
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
+  background:#ffffff;
+  padding:15px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 2px 8px rgba(0,0,0,.12);
 }
 
 nav a{
-    display:block;
-    color:white;
-    text-decoration:none;
-    padding:14px 16px;
-    font-weight:bold;
+  color:#006994;
+  text-decoration:none;
+  font-weight:bold;
+  margin:0 10px;
+  display:inline-block;
+  padding:6px;
 }
 
 nav a:hover{
-    background:#00a6c7;
+  color:#00a6a6;
 }
 
 section{
-    padding:55px 20px;
-    max-width:1100px;
-    margin:auto;
+  max-width:1100px;
+  margin:auto;
+  padding:55px 20px;
 }
 
-section h2{
-    text-align:center;
-    color:#006994;
-    margin-bottom:25px;
-    font-size:32px;
+h2{
+  text-align:center;
+  color:#006994;
+  font-size:32px;
+  margin-bottom:25px;
+}
+
+h3{
+  color:#007f86;
+  margin-bottom:10px;
 }
 
 .intro{
-    text-align:center;
-    max-width:850px;
-    margin:auto;
-    font-size:18px;
-}
-
-.hero{
-    background:white;
+  text-align:center;
+  font-size:19px;
+  max-width:850px;
+  margin:auto;
 }
 
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:22px;
-    margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+  margin-top:30px;
 }
 
 .card{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
-    border-top:5px solid #00a6c7;
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 4px 14px rgba(0,0,0,.10);
+  border-top:5px solid #00a6a6;
 }
 
-.card h3{
-    color:#006994;
-    margin-bottom:10px;
+.card p{
+  margin-top:8px;
 }
 
-.icon{
-    font-size:40px;
-    margin-bottom:10px;
+.hero-box{
+  background:white;
+  max-width:900px;
+  margin:30px auto 0;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 5px 18px rgba(0,0,0,.12);
+  text-align:center;
 }
 
-.territorio{
-    background:#e6f6f8;
-    max-width:none;
+.hero-box strong{
+  color:#006994;
 }
 
-.territorio .contenido{
-    max-width:1100px;
-    margin:auto;
+.data{
+  background:#e5f5f7;
 }
 
-.data-box{
-    background:#073b5c;
-    color:white;
-    padding:35px 20px;
-    border-radius:18px;
-    text-align:center;
-    margin-top:30px;
+.highlight{
+  background:linear-gradient(135deg,#006994,#00a6a6);
+  color:white;
+  text-align:center;
+  border-radius:20px;
+  padding:40px 25px;
+  margin-top:25px;
 }
 
-.data-box h3{
-    font-size:28px;
-    margin-bottom:12px;
-}
-
-.button{
-    display:inline-block;
-    margin-top:20px;
-    padding:13px 23px;
-    background:#00a6c7;
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-}
-
-.button:hover{
-    background:#0086a3;
-}
-
-.timeline{
-    max-width:800px;
-    margin:30px auto;
-}
-
-.step{
-    background:white;
-    margin:15px 0;
-    padding:20px;
-    border-left:6px solid #38b6a5;
-    border-radius:8px;
-    box-shadow:0 3px 10px rgba(0,0,0,.07);
-}
-
-.step strong{
-    color:#006994;
-}
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;
-    margin-top:30px;
-}
-
-.photo{
-    min-height:180px;
-    background:linear-gradient(135deg,#d8f3f7,#b8e6dc);
-    border-radius:15px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:20px;
-    color:#006994;
-    font-weight:bold;
-}
-
-.allies{
-    background:#eef7f5;
-    max-width:none;
-}
-
-.allies-content{
-    max-width:1100px;
-    margin:auto;
-}
-
-.contact{
-    background:#006994;
-    color:white;
-    text-align:center;
-    max-width:none;
-}
-
-.contact h2{
-    color:white;
+.highlight h2{
+  color:white;
 }
 
 footer{
-    background:#052b42;
-    color:white;
-    text-align:center;
-    padding:30px 20px;
+  background:#12344d;
+  color:white;
+  text-align:center;
+  padding:35px 20px;
 }
 
 footer p{
-    margin:5px;
+  margin:6px 0;
 }
 
-.small{
-    font-size:14px;
-    opacity:.8;
+.button{
+  display:inline-block;
+  margin-top:20px;
+  background:white;
+  color:#006994;
+  padding:12px 22px;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
 @media(max-width:600px){
+  header h1{
+    font-size:32px;
+  }
 
-    header{
-        padding:40px 15px;
-    }
+  header p{
+    font-size:17px;
+  }
 
-    header p{
-        font-size:16px;
-    }
+  nav a{
+    margin:3px 5px;
+    font-size:14px;
+  }
 
-    nav a{
-        padding:10px 9px;
-        font-size:13px;
-    }
-
-    section{
-        padding:40px 15px;
-    }
-
-    section h2{
-        font-size:27px;
-    }
-
-    .card{
-        padding:20px;
-    }
+  h2{
+    font-size:27px;
+  }
 }
 </style>
 </head>
@@ -280,256 +188,58 @@ footer p{
 <body>
 
 <header id="inicio">
+  <h1>💧 Club Defensores del Azul</h1>
+  <p>Del territorio al dato: conocemos, investigamos y protegemos el agua.</p>
 
-    <div class="logo">💧</div>
-
-    <h1>Club Defensores del Azul</h1>
-
-    <p>
-        Del territorio al dato: conocemos, investigamos y protegemos el agua.
-    </p>
-
-    <p>
-        Institución Educativa Pueblo Rico · Neira · Caldas
-    </p>
-
+  <div class="hero-box">
+    <strong>Institución Educativa Pueblo Rico</strong><br>
+    Neira, Caldas<br><br>
+    Un espacio escolar para conocer nuestro territorio, investigar sus ecosistemas y promover acciones para proteger el agua.
+  </div>
 </header>
 
 <nav>
-<ul>
-    <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#club">El Club</a></li>
-    <li><a href="#territorio">Territorio</a></li>
-    <li><a href="#investigacion">Investigación</a></li>
-    <li><a href="#galeria">Galería</a></li>
-    <li><a href="#aliados">Aliados</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-</ul>
+  <a href="#inicio">Inicio</a>
+  <a href="#nosotros">Quiénes somos</a>
+  <a href="#territorio">Territorio</a>
+  <a href="#biodiversidad">Biodiversidad</a>
+  <a href="#investigacion">Investigación</a>
+  <a href="#tecnologia">Tecnología</a>
+  <a href="#galeria">Galería</a>
+  <a href="#contacto">Contacto</a>
 </nav>
 
-<section class="hero" id="club">
+<section id="nosotros">
+  <h2>🌎 Quiénes somos</h2>
 
-    <h2>💧 Somos Defensores del Azul</h2>
+  <p class="intro">
+    El Club Defensores del Azul es una iniciativa educativa de la
+    Institución Educativa Pueblo Rico, en Neira, Caldas, orientada al
+    conocimiento, valoración y protección del agua y de los ecosistemas
+    asociados a ella.
+  </p>
 
-    <div class="intro">
+  <div class="cards">
 
-        <p>
-            El Club Defensores del Azul es una iniciativa educativa y ambiental
-            de la Institución Educativa Pueblo Rico, orientada al conocimiento,
-            cuidado y protección del agua y de los ecosistemas asociados al
-            territorio.
-        </p>
-
-        <br>
-
-        <p>
-            Nuestros estudiantes observan, registran, investigan y comparten
-            información sobre los recursos naturales que hacen parte de nuestra
-            comunidad.
-        </p>
-
+    <div class="card">
+      <h3>💧 Nuestra misión</h3>
+      <p>
+        Formar estudiantes capaces de observar, investigar y participar
+        activamente en la protección de las fuentes de agua y la biodiversidad
+        de nuestro territorio.
+      </p>
     </div>
 
-    <div class="cards">
-
-        <div class="card">
-            <div class="icon">💧</div>
-            <h3>Defendemos el agua</h3>
-            <p>
-                Promovemos acciones para conocer y proteger las fuentes hídricas,
-                humedales y microcuencas de nuestro territorio.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="icon">🌱</div>
-            <h3>Protegemos la biodiversidad</h3>
-            <p>
-                Reconocemos las especies vegetales y la importancia de conservar
-                los ecosistemas locales.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="icon">🔎</div>
-            <h3>Investigamos</h3>
-            <p>
-                Convertimos la observación del territorio en información útil
-                para comprender nuestro ambiente.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="icon">📱</div>
-            <h3>Usamos TIC</h3>
-            <p>
-                Utilizamos herramientas digitales para registrar, organizar,
-                analizar y comunicar nuestros datos.
-            </p>
-        </div>
-
+    <div class="card">
+      <h3>🔎 Nuestra mirada</h3>
+      <p>
+        Pasamos de la observación del territorio a la generación de datos
+        que permitan comprender mejor nuestros ecosistemas.
+      </p>
     </div>
 
-</section>
-
-<section class="territorio" id="territorio">
-
-<div class="contenido">
-
-    <h2>🌎 Nuestro territorio</h2>
-
-    <div class="intro">
-
-        <p>
-            Desde Pueblo Rico, Neira, Caldas, exploramos los ecosistemas que
-            hacen parte de nuestro entorno y reconocemos el agua como elemento
-            fundamental para la vida.
-        </p>
-
-    </div>
-
-    <div class="cards">
-
-        <div class="card">
-            <div class="icon">🌿</div>
-            <h3>Humedales</h3>
-            <p>
-                Investigamos y documentamos los humedales presentes en nuestra
-                zona de influencia.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="icon">💦</div>
-            <h3>Microcuencas</h3>
-            <p>
-                Reconocemos las fuentes de agua y su relación con las
-                comunidades y los ecosistemas.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="icon">🌳</div>
-            <h3>Biodiversidad vegetal</h3>
-            <p>
-                Identificamos especies vegetales y registramos información
-                sobre su estado y características.
-            </p>
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-<section id="investigacion">
-
-    <h2>🔬 Del territorio al dato</h2>
-
-    <p class="intro">
-        Nuestro proyecto busca transformar la observación del territorio en
-        información que pueda ser analizada, compartida y utilizada para
-        fortalecer la educación ambiental.
-    </p>
-
-    <div class="timeline">
-
-        <div class="step">
-            <strong>01 · Observamos</strong>
-            <p>
-                Reconocemos nuestro territorio, sus ecosistemas y sus
-                problemáticas ambientales.
-            </p>
-        </div>
-
-        <div class="step">
-            <strong>02 · Registramos</strong>
-            <p>
-                Tomamos fotografías, ubicaciones, mediciones y observaciones
-                durante nuestras salidas de campo.
-            </p>
-        </div>
-
-        <div class="step">
-            <strong>03 · Organizamos</strong>
-            <p>
-                Utilizamos herramientas digitales para organizar la información
-                recolectada.
-            </p>
-        </div>
-
-        <div class="step">
-            <strong>04 · Analizamos</strong>
-            <p>
-                Interpretamos los datos para comprender mejor nuestro territorio.
-            </p>
-        </div>
-
-        <div class="step">
-            <strong>05 · Compartimos</strong>
-            <p>
-                Divulgamos nuestros resultados para que más personas conozcan y
-                protejan nuestro patrimonio natural.
-            </p>
-        </div>
-
-    </div>
-
-    <div class="data-box">
-
-        <h3>📊 Tecnología al servicio del ambiente</h3>
-
-        <p>
-            Integramos herramientas como CyberTracker, sistemas de información
-            geográfica y plataformas digitales para fortalecer nuestro proceso
-            de investigación.
-        </p>
-
-        <a href="#" class="button">
-            Próximamente: mapa interactivo
-        </a>
-
-    </div>
-
-</section>
-
-<section class="territorio">
-
-<div class="contenido">
-
-    <h2>📍 Nuestros lugares de investigación</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Humedal Llanitos</h3>
-            <p>
-                Espacio natural objeto de observación y registro dentro del
-                proceso de investigación del Club.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Humedal Casas Viejas</h3>
-            <p>
-                Ecosistema incluido dentro de nuestras actividades de
-                reconocimiento y documentación ambiental.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Microcuencas</h3>
-            <p>
-                Seguimos explorando las fuentes y ecosistemas asociados al agua
-                en nuestra zona de influencia.
-            </p>
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-<section id
+    <div class="card">
+      <h3>🤝 Trabajo colectivo</h3>
+      <p>
+        Estudiantes, docentes, familias e instituciones aliadas construimos
+        conocimiento y acciones para cuidar nuestro patrimonio natural.
